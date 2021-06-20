@@ -38,7 +38,7 @@ export default function Header() {
                 <li className="list-item">Invoice List</li>
               </Link>
               <Link to="/pending" onClick={handleSidebar}>
-                <li className="list-item">Pending Invoices</li>
+                <li className="list-item">Late Invoices</li>
               </Link>
             </ul>
           </div>
