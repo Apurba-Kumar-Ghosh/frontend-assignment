@@ -7,6 +7,7 @@
 .nav-top {
   display: flex;
   flex-direction: row;
+  justify-content : flex-start;
 }
 .nav-icon {
   width: 40px;

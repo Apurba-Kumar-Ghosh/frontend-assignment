@@ -19,9 +19,6 @@ export default function Header() {
                 <FaBars />
               </Link>
             </div>
-            <div className="app-title">
-              <h1>Invoicing App</h1>
-            </div>
           </div>
           <div className={sidebar ? "nav-menu active" : "nav-menu"}>
             <Link to="#" onClick={handleSidebar}>
