@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { InvoiceListContainer } from "../containers/InvoiceListContainer";
 import styled from "styled-components";
-import data from "../misc/data.json";
 import { FirebaseContext } from "../firebase";
 const ListContainer = styled.div`
   width: 75vw;

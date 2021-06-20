@@ -30,7 +30,7 @@ export function InvoiceContainer() {
           </Invoice.Frame>
           <Invoice.Frame>
             <Invoice.SubText>Date of Issue</Invoice.SubText>
-            <Invoice.Text>21/6/2021</Invoice.Text>
+            <Invoice.Text>abcd-xy-mn</Invoice.Text>
           </Invoice.Frame>
         </Invoice.Frame>
       </Invoice.Group>
@@ -54,13 +54,13 @@ export function InvoiceContainer() {
             <Invoice.Text>Your Item Name</Invoice.Text>
           </Invoice.Description>
           <Invoice.Units>
-            <Invoice.Text>Unit Cost</Invoice.Text>
+            <Invoice.Text>Rs1000</Invoice.Text>
           </Invoice.Units>
           <Invoice.Units>
-            <Invoice.Text>Unit Cost</Invoice.Text>
+            <Invoice.Text>No of hours</Invoice.Text>
           </Invoice.Units>
           <Invoice.Units>
-            <Invoice.Text>Unit Cost</Invoice.Text>
+            <Invoice.Text>amount</Invoice.Text>
           </Invoice.Units>
         </Invoice.ListItem>
         <Invoice.ListItem>
@@ -68,13 +68,13 @@ export function InvoiceContainer() {
             <Invoice.Text>Your Item Name</Invoice.Text>
           </Invoice.Description>
           <Invoice.Units>
-            <Invoice.Text>Unit Cost</Invoice.Text>
+            <Invoice.Text>Rs 1000</Invoice.Text>
           </Invoice.Units>
           <Invoice.Units>
-            <Invoice.Text>Unit Cost</Invoice.Text>
+            <Invoice.Text>No of hours</Invoice.Text>
           </Invoice.Units>
           <Invoice.Units>
-            <Invoice.Text>Unit Cost</Invoice.Text>
+            <Invoice.Text>amount</Invoice.Text>
           </Invoice.Units>
         </Invoice.ListItem>
         <Invoice.ListItem>
@@ -82,13 +82,13 @@ export function InvoiceContainer() {
             <Invoice.Text>Your Item</Invoice.Text>
           </Invoice.Description>
           <Invoice.Units>
-            <Invoice.Text>Unit Cost</Invoice.Text>
+            <Invoice.Text>Rs 1000</Invoice.Text>
           </Invoice.Units>
           <Invoice.Units>
-            <Invoice.Text>Unit Cost</Invoice.Text>
+            <Invoice.Text>No of hours</Invoice.Text>
           </Invoice.Units>
           <Invoice.Units>
-            <Invoice.Text>Unit Cost</Invoice.Text>
+            <Invoice.Text>amount</Invoice.Text>
           </Invoice.Units>
         </Invoice.ListItem>
       </Invoice.List>
@@ -96,7 +96,7 @@ export function InvoiceContainer() {
         <Invoice.FooterContainer>
           <Invoice.Footer>
             <Invoice.Text>Due Date :</Invoice.Text>
-            <Invoice.Text>2021/8/25</Invoice.Text>
+            <Invoice.Text>2021/8/31</Invoice.Text>
           </Invoice.Footer>
           <Invoice.Footer>
             <Invoice.Text>Pay through :</Invoice.Text>
@@ -106,15 +106,15 @@ export function InvoiceContainer() {
         <Invoice.FooterContainer>
           <Invoice.Footer>
             <Invoice.Heading>Subtotal</Invoice.Heading>
-            <Invoice.Text>4500</Invoice.Text>
+            <Invoice.Text>Subtotal</Invoice.Text>
           </Invoice.Footer>
           <Invoice.Footer>
             <Invoice.Heading>Taxes</Invoice.Heading>
-            <Invoice.Text>500</Invoice.Text>
+            <Invoice.Text>Tax Amount</Invoice.Text>
           </Invoice.Footer>
           <Invoice.Footer>
             <Invoice.Heading>Total</Invoice.Heading>
-            <Invoice.Text>5000</Invoice.Text>
+            <Invoice.Text>Total Amount</Invoice.Text>
           </Invoice.Footer>
         </Invoice.FooterContainer>
       </Invoice.GroupTotal>

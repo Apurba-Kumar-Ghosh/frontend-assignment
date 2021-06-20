@@ -28,6 +28,9 @@ export default function Header() {
               <GrClose className="icon" />
             </Link>
             <ul className="nav-menu-list">
+              <Link to="/" onClick={handleSidebar}>
+                <li className="list-item">Home</li>
+              </Link>
               <Link to="/new" onClick={handleSidebar}>
                 <li className="list-item">Create New Invoice</li>
               </Link>
@@ -36,9 +39,6 @@ export default function Header() {
               </Link>
               <Link to="/pending" onClick={handleSidebar}>
                 <li className="list-item">Pending Invoices</li>
-              </Link>
-              <Link to="/" onClick={handleSidebar}>
-                <li className="list-item">Home</li>
               </Link>
             </ul>
           </div>

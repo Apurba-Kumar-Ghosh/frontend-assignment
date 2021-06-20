@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.section`
   width: 55vw;
-  height: 85vh;
+  height: 80vh;
   margin: 0 auto;
+  margin-top : 30px;
   font-size: 14px;
   box-shadow: 2px 1px 5px 8px rgba(0, 0, 0, 0.41);
   -webkit-box-shadow: 2px 1px 5px 8px rgba(0, 0, 0, 0.41);

@@ -15,17 +15,6 @@ export function PendingInvoiceList() {
     const [database, setData] = React.useState([]);
     const db = firebase.firestore();
     const newDate = new Date()
-    function makeNewData() {
-        const newData = database.filter((item) => {
-          const date = new Date(item.dueDate);
-          console.log(date);
-          if (newDate > date) {
-            console.log(true);
-            return true;
-          } else return false;
-        });
-        return newData
-    }
     React.useEffect(() => {
       db.collection("Invoices")
         .get()
@@ -37,13 +26,15 @@ export function PendingInvoiceList() {
         })
             .catch((error) => console.log(error.message));
         
-        const filteredData = makeNewData()
-        setData(filteredData)
     }, []);
   return (
     <ListContainer>
-      {database.map((item, index) => {
-        return <InvoiceListContainer key={index} data={item} />;
+          {database.map((item, index) => {
+              const date = new Date(item.dueDate)
+              if (date < newDate)
+                  return <InvoiceListContainer key={index} data={item} />;
+              else
+                  return null
       })}
     </ListContainer>
   );
