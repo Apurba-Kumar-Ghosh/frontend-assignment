@@ -1,0 +1,53 @@
+[
+  {
+    "Name": "XYZ Pvt Ltd.",
+    "workOne": "Manual Labour",
+    "hoursOne": "3",
+    "workTwo": "IT help",
+    "hoursTwo": "2",
+    "workThree": "Something Important",
+    "hoursThree": "4",
+    "firstLine": "New Upper Chelidanga",
+    "secondLine": "",
+    "city": "Asansol",
+    "state": "WB",
+    "zipCode": "713304",
+    "date": "2021/05/21",
+    "dueDate": "2021/06/28",
+    "amt": "10350"
+  },
+  {
+    "Name": "Ramanujan",
+    "workOne": "Plumbing",
+    "hoursOne": "2",
+    "workTwo": "Painting",
+    "hoursTwo": "1",
+    "workThree": "Modelling",
+    "hoursThree": "3",
+    "firstLine": "Madurdaha 793",
+    "secondLine": "",
+    "city": "Kolkata",
+    "state": "WB",
+    "zipCode": "700107",
+    "date": "2021/04/21",
+    "dueDate": "2021/06/18",
+    "amt": "6900"
+  },
+  {
+    "Name": "Raj Sarkar",
+    "workOne": "SomeTHing",
+    "hoursOne": "1",
+    "workTwo": "Some other thing",
+    "hoursTwo": "5",
+    "workThree": "CameraMan",
+    "hoursThree": "4",
+    "firstLine": "RR plot 579",
+    "secondLine": "",
+    "city": "Kolkata",
+    "state": "WB",
+    "zipCode": "700107",
+    "date": "2021/06/27",
+    "dueDate": "2021/05/23",
+    "amt": "11150"
+  }
+]
