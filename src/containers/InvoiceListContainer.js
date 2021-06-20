@@ -1,7 +1,7 @@
 import React from "react";
 import InvoiceListItem from "../Components/invoiceList";
 
-export function InvoiceListContainer({ children, data, ...restProps }) {
+export function InvoiceListContainer({ children, data,show, ...restProps }) {
   return (
     <InvoiceListItem>
       <InvoiceListItem.Group>

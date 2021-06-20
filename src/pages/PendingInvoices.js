@@ -1,5 +1,6 @@
 import React, {useContext} from "react";
 import { InvoiceListContainer } from "../containers/InvoiceListContainer";
+import { NewInvoiceContainer } from "../containers/NewInvoiceContainer";
 import styled from "styled-components";
 import { FirebaseContext } from "../firebase";
 const ListContainer = styled.div`
@@ -28,14 +29,14 @@ export function PendingInvoiceList() {
         
     }, []);
   return (
-    <ListContainer>
+    <>
           {database.map((item, index) => {
               const date = new Date(item.dueDate)
               if (date < newDate)
-                  return <InvoiceListContainer key={index} data={item} />;
+                  return <NewInvoiceContainer key={index} data={item} />;
               else
                   return null
       })}
-    </ListContainer>
+    </>
   );
 }

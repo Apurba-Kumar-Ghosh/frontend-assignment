@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { InvoiceListContainer } from "../containers/InvoiceListContainer";
+import { NewInvoiceContainer } from "../containers/NewInvoiceContainer";
 import styled from "styled-components";
 import { FirebaseContext } from "../firebase";
 const ListContainer = styled.div`
@@ -30,10 +31,10 @@ export function InvoiceList() {
       .catch((error) => console.log(error.message));
   }, []);
   return (
-    <ListContainer>
+    <>
       {database.map((item, index) => {
-        return <InvoiceListContainer key={index} data={item} />;
+        return <NewInvoiceContainer key={index} data={item} />;
       })}
-    </ListContainer>
+    </>
   );
 }
