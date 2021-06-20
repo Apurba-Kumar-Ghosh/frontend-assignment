@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import { Col, Row, Button, Form, FormGroup, Label, Input } from "reactstrap";
 import styled from "styled-components";
 import { NewInvoiceContainer } from "../containers/NewInvoiceContainer";
+import { FirebaseContext } from "../firebase";
 
 const Container = styled.div`
   width: 75vw;
@@ -9,21 +10,25 @@ const Container = styled.div`
   margin: 100px auto;
 `;
 export function NewInvoiceForm() {
+  const { firebase } = useContext(FirebaseContext);
   const [inputMode, setInputMode] = useState(true);
+  const db = firebase.firestore();
   const [data, setData] = useState({
     Name: "",
     workOne: "",
-    hoursOne: "",
+    hoursOne: 0,
     workTwo: "",
-    hoursTwo: "",
+    hoursTwo: 0,
     workThree: "",
-    hoursThree: "",
+    hoursThree: 0,
     firstLine: "",
     secondLine: "",
     city: "",
     state: "",
     zipCode: "",
     date: "",
+    dueDate: "",
+    amt : null
   });
   function handleChange(e) {
     const { name, value } = e.target;
@@ -31,13 +36,26 @@ export function NewInvoiceForm() {
   }
   function handleSubmit(e) {
     e.preventDefault();
+    const amount =
+      1000 *
+      (parseInt(data.hoursOne) +
+        parseInt(data.hoursThree) +
+        parseInt(data.hoursTwo));
+    console.log(amount)
+    const name = "amt"
+    setData(prev => ({ ...prev, [name]: amount }));
+    db.collection("Invoices").add(data)
+      .then(docRef => {
+      console.log(docRef)
+      })
+    .catch(error => console.log(error.message))
     setInputMode(false);
   }
   return inputMode ? (
     <Container>
       <Form onSubmit={(e) => handleSubmit(e)}>
         <Row>
-          <Col md={6}>
+          <Col md={4}>
             <FormGroup>
               <Label for="CustomerName">Name</Label>
               <Input
@@ -50,13 +68,26 @@ export function NewInvoiceForm() {
               />
             </FormGroup>
           </Col>
-          <Col md={6}>
+          <Col md={4}>
             <FormGroup>
-              <Label for="date">Name</Label>
+              <Label for="date">Issue Date</Label>
               <Input
                 type="date"
                 name="date"
                 value={data.date}
+                id="CustomerName"
+                placeholder="Date"
+                onChange={(e) => handleChange(e)}
+              />
+            </FormGroup>
+          </Col>
+          <Col md={4}>
+            <FormGroup>
+              <Label for="date">Due Date</Label>
+              <Input
+                type="date"
+                name="dueDate"
+                value={data.dueDate}
                 id="CustomerName"
                 placeholder="Date"
                 onChange={(e) => handleChange(e)}

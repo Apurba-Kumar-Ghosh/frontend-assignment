@@ -10,12 +10,12 @@ export function InvoiceListContainer({ children, data, ...restProps }) {
       </InvoiceListItem.Group>
 
       <InvoiceListItem.Group>
-        <InvoiceListItem.Heading>Due Date :</InvoiceListItem.Heading>
-        <InvoiceListItem.ImpText>{data.dueDate}</InvoiceListItem.ImpText>
+        <InvoiceListItem.Heading>Issue Date :</InvoiceListItem.Heading>
+        <InvoiceListItem.Text>{data.date}</InvoiceListItem.Text>
       </InvoiceListItem.Group>
       <InvoiceListItem.Group>
-        <InvoiceListItem.Heading>Amount Due :</InvoiceListItem.Heading>
-        <InvoiceListItem.Text>Rs. {data.amt}</InvoiceListItem.Text>
+        <InvoiceListItem.Heading>Due Date :</InvoiceListItem.Heading>
+        <InvoiceListItem.ImpText>Rs. {data.dueDate}</InvoiceListItem.ImpText>
       </InvoiceListItem.Group>
     </InvoiceListItem>
   );

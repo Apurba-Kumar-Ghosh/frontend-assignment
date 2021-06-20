@@ -6,6 +6,7 @@ import "./App.css";
 import Home from "./pages/Home";
 import { NewInvoiceForm } from "./pages/NewInvoice";
 import { InvoiceList } from "./pages/InvoiceList";
+import {PendingInvoiceList} from "./pages/PendingInvoices"
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
           <InvoiceList />
         </Route>
         <Route ecact path="/pending">
-          <p>List of Pending Invoices</p>
+          <PendingInvoiceList />
         </Route>
         <Route ecact path="/new">
           <NewInvoiceForm />
